@@ -15,3 +15,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/mdsumner/sooty.watch
+BugReports: https://github.com/mdsumner/sooty.watch/issues
