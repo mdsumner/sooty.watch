@@ -18,14 +18,12 @@ You can install the development version of sooty.watch from
 pak::pak("mdsumner/sooty.watch")
 ```
 
-## Example
+Exists to report on what [sooty](https://github.com/mdsumner/sooty/) can
+access.
 
-This is a basic example which shows you how to solve a common problem:
+Uset this link:
 
-``` r
-library(sooty.watch)
-## basic example code
-```
+<https://mdsumner.github.io/sooty.watch/articles/sooty-watch.html>
 
 # Code of Conduct
 
