@@ -7,7 +7,7 @@
 #' @examples
 #' watch_curated()
 watch_curated <- function() {
-  dplyr::group_by(sooty:::.curated_objects(), .data$Dataset) |>
+  dplyr::group_by(sooty::sooty_files(), .data$Dataset) |>
   dplyr::summarize(mindate = min(date),
                    maxdate = max(date),
                    n = dplyr::n()) |>
@@ -17,7 +17,7 @@ watch_curated <- function() {
 #' @name watch
 #' @export
 watch_buckets <- function() {
-  dplyr::group_by(sooty:::.objects() , .data$Bucket) |>
+  dplyr::group_by(sooty::sooty_files() , .data$Bucket) |>
   dplyr::summarize(n = dplyr::n()) |>
   dplyr::arrange(desc(.data$n))
 }

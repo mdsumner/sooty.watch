@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(dplyr)
 ```
 
 ```{r setup}
@@ -19,4 +20,16 @@ library(sooty.watch)
 watch_curated()
 
 watch_buckets()
+```
+
+For each dataset, let's get the first and last and plot. 
+
+```{r datasets}
+library(dplyr)
+datasets <- group_by(sooty::sooty_files(), Dataset)
+
+th <- function(x, ...) rbind(head(x, 1L), tail(x, 1L))
+read1 <- function(x) terra::rast(x)[[1]]
+dplyr::group_map(datasets, \(.x, ...) try(terra::plot(do.call(c, lapply(th(.x)$source, read1)))))
+
 ```
