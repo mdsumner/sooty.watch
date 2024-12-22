@@ -21,7 +21,7 @@ pak::pak("mdsumner/sooty.watch")
 Exists to report on what [sooty](https://github.com/mdsumner/sooty/) can
 access.
 
-Uset this link:
+Use this link:
 
 <https://mdsumner.github.io/sooty.watch/articles/sooty-watch.html>
 
