@@ -24,6 +24,7 @@ watch_buckets()
 
 For each dataset, let's get the first and last and plot. 
 
+
 ```{r datasets}
 library(dplyr)
 datasets <- group_by(sooty::sooty_files(), Dataset)
