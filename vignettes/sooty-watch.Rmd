@@ -33,3 +33,4 @@ read1 <- function(x) terra::rast(x)[[1]]
 dplyr::group_map(datasets, \(.x, ...) try(terra::plot(do.call(c, lapply(th(.x)$source, read1)))))
 
 ```
+nl
