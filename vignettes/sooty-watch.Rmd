@@ -30,7 +30,11 @@ library(dplyr)
 datasets <- group_by(sooty::sooty_files(), Dataset)
 
 th <- function(x, ...) rbind(head(x, 1L), tail(x, 1L))
-read1 <- function(x) terra::rast(x)[[1]]
+read1 <- function(x) {
+  out <- terra::rast(x)[[1]]
+  names(out) <- substr(names(out), 1, 24)
+out
+}
 dplyr::group_map(datasets, \(.x, ...) try(terra::plot(do.call(c, lapply(th(.x)$source, read1)))))
 
 ```
