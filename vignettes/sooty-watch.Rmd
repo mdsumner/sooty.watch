@@ -39,6 +39,7 @@ plotfun <- function(x) {
 par(mfrow = c(1, 2))
   plot(x[[1]]); plot(x[[2]])
 }
+library(terra)
 dplyr::group_map(datasets, \(.x, ...) try(plotfun(lapply(th(.x)$source, read1))))
 
 ```
