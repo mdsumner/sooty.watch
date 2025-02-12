@@ -44,11 +44,12 @@ read1 <- function(x) {
 out
 }
 plotfun <- function(x) {
-par(mfrow = c(1, 2))
-  plot(x[[1]]); plot(x[[2]])
+
+  plot(x[[1]], main = format(time(x[[1]]))); plot(x[[2]], main = format(time(x[[2]])))
 }
 library(terra)
-dplyr::group_map(datasets, \(.x, ...) try(plotfun(lapply(th(.x)$source, read1))))
+ctch <- dplyr::group_map(datasets, \(.x, ...) try(plotfun(lapply(th(.x)$source, read1))))
 
 ```
-nl
+
+
