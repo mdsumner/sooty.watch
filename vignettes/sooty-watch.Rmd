@@ -15,6 +15,14 @@ knitr::opts_chunk$set(
 library(dplyr)
 ```
 
+Set some env vars we need
+
+```{r vars}
+Sys.setenv("AWS_NO_SIGN_REQUEST" = "YES")
+Sys.setenv("AWS_S3_ENDPOINT" = "projects.pawsey.org.au")
+Sys.setenv("AWS_VIRTUAL_HOSTING" = "FALSE")
+```
+
 ```{r setup}
 library(sooty.watch)
 watch_curated()
