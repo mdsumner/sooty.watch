@@ -35,7 +35,11 @@ read1 <- function(x) {
   names(out) <- substr(names(out), 1, 24)
 out
 }
-dplyr::group_map(datasets, \(.x, ...) try(terra::plot(do.call(c, lapply(th(.x)$source, read1)))))
+plotfun <- function(x) {
+par(mfrow = c(1, 2))
+  plot(x[[1]]); plot(x[[2]])
+}
+dplyr::group_map(datasets, \(.x, ...) try(plotfun(lapply(th(.x)$source, read1))))
 
 ```
 nl
