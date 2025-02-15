@@ -17,4 +17,4 @@ Suggests:
 VignetteBuilder: knitr
 URL: https://github.com/mdsumner/sooty.watch
 BugReports: https://github.com/mdsumner/sooty.watch/issues
-Remotes: mdsumner/sooty@S7
+Remotes: mdsumner/sooty
