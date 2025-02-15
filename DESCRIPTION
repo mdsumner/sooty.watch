@@ -13,7 +13,8 @@ Imports:
     sooty (>= 0.1.1.9000)
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    terra
 VignetteBuilder: knitr
 URL: https://github.com/mdsumner/sooty.watch
 BugReports: https://github.com/mdsumner/sooty.watch/issues
